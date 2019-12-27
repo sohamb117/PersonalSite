@@ -1,0 +1,11 @@
+#top {
+    background-image: url(/resources/stars.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
