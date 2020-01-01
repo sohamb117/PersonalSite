@@ -1,24 +1,101 @@
+:root {
+    --black: #0D0C0E;
+    --nearblack: #131214;
+    --offblack: #111012;
+    --semiblack: #121212;
+    --darkgrey: #161517;
+    --midgrey: #141313;
+    --grey: #4B4B4B;
+    --lightgrey: #272627;
+    --semiwhite: #808080;
+    --offwhite: #B3B4B3;
+    --white: #f3f3f3;
+}
+
+@font-face {
+    font-family: 'moonbold';
+    src: url('../resources/fonts/moon2.0-bold-webfont.woff2') format('woff2'), url('../resources/fonts/moon2.0-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moonlight';
+    src: url('../resources/fonts/moon2.0-light-webfont.woff2') format('woff2'), url('../resources/fonts/moon2.0-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'moonregular';
+    src: url('../resources/fonts/moon2.0-regular-webfont.woff2') format('woff2'), url('../resources/fonts/moon2.0-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exanregular';
+    src: url('../resources/fonts/exan-regular-webfont.woff2') format('woff2'), url('../resources/fonts/exan-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scrollbar-color: var(--white) var(--nearblack);
+    scrollbar-width: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: var(--nearblack);
+    opacity: 0;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: var(--white);
+    border-radius: 50px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--offwhite);
+    border-radius: 50px;
 }
 
 
 /* NAVBAR */
 
 nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 6vh;
-    background-color: blue;
+    background-color: var(--nearblack);
 }
 
 .logo {
-    color: white;
+    color: var(--white);
+    font-family: 'exanregular';
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
@@ -32,18 +109,21 @@ nav {
 
 .nav-links li {
     list-style: none;
-    color: white;
+    color: var(--white);
 }
 
 .nav-links a {
+    font-family: 'moonregular';
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 .burger div {
     width: 20px;
     height: 2px;
-    background-color: white;
+    background-color: var(--white);
     margin: 5px;
     transition: all 0.01s ease;
 }
@@ -61,16 +141,16 @@ nav {
 
 @media screen and (max-width:768px) {
     .nav-links {
-        position: absolute;
+        position: fixed;
         right: 0px;
         height: 100vh;
         top: 6vh;
-        background-color: blue;
+        background-color: var(--nearblack);
         display: block;
         width: 50%;
         text-align: center;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.25s ease-in;
     }
     .nav-links li {
         opacity: 0;
@@ -113,7 +193,7 @@ nav {
 /* Body */
 
 #top {
-    background-color: black;
+    background-color: var(--black);
     color: white;
     width: 100vw;
     height: 100vh;
@@ -122,16 +202,7 @@ nav {
 }
 
 #about {
-    background-color: blue;
-    color: white;
-    width: 100vw;
-    height: 100vh;
-    padding: 0px;
-    margin: 0px;
-}
-
-#about {
-    background-color: blue;
+    background-color: var(--darkgrey);
     color: white;
     width: 100vw;
     height: 100vh;
@@ -140,7 +211,7 @@ nav {
 }
 
 #skills {
-    background-color: black;
+    background-color: var(--black);
     color: white;
     width: 100vw;
     height: 100vh;
@@ -149,7 +220,7 @@ nav {
 }
 
 #projects {
-    background-color: blue;
+    background-color: var(--darkgrey);
     color: white;
     width: 100vw;
     height: 100vh;
@@ -158,10 +229,39 @@ nav {
 }
 
 #contact {
-    background-color: black;
+    background-color: var(--black);
     color: white;
     width: 100vw;
     height: 100vh;
     padding: 0px;
     margin: 0px;
+}
+
+.sectionHeader {
+    text-align: center;
+    font-family: 'exanregular';
+    padding-top: 20vh;
+}
+
+.sectionHr {
+    width: 20vw;
+    margin: 1vh auto;
+    border-radius: 5px;
+}
+
+.sectionText {
+    text-align: center;
+    font-family: 'moonregular';
+    margin-top: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#aboutText {
+    width: 50vw;
+    text-align: center;
+    font-family: 'moonregular';
+    margin: 2vh auto;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
