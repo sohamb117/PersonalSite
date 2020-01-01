@@ -13,27 +13,6 @@
 }
 
 @font-face {
-    font-family: 'moonbold';
-    src: url('../resources/fonts/moon2.0-bold-webfont.woff2') format('woff2'), url('../resources/fonts/moon2.0-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'moonlight';
-    src: url('../resources/fonts/moon2.0-light-webfont.woff2') format('woff2'), url('../resources/fonts/moon2.0-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'moonregular';
-    src: url('../resources/fonts/moon2.0-regular-webfont.woff2') format('woff2'), url('../resources/fonts/moon2.0-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'exanregular';
     src: url('../resources/fonts/exan-regular-webfont.woff2') format('woff2'), url('../resources/fonts/exan-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -113,8 +92,9 @@ nav {
 }
 
 .nav-links a {
-    font-family: 'moonregular';
+    font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
+    font-weight: medium;
     letter-spacing: 2px;
     text-decoration: none;
     color: var(--white);
@@ -190,6 +170,71 @@ nav {
 }
 
 
+/* Social Buttons: from https://www.youtube.com/watch?v=fDm0WJ_66d0 */
+
+#socialLinks {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    margin: 10px;
+    border-radius: 70%;
+    color: var(--darkgrey);
+    overflow: hidden;
+    position: relative;
+}
+
+.btn i {
+    line-height: 60px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i {
+    transform: scale(1.3);
+    color: var(--black)
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: var(--offwhite);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before {
+    animation: aaa 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes aaa {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+
+/* Typewriter Animation */
+
+
 /* Body */
 
 #top {
@@ -251,17 +296,16 @@ nav {
 
 .sectionText {
     text-align: center;
-    font-family: 'moonregular';
+    font-family: 'Dosis', sans-serif;
+    font-weight: medium;
     margin-top: 1vh;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 18px;
 }
 
 #aboutText {
     width: 50vw;
-    text-align: center;
-    font-family: 'moonregular';
-    margin: 2vh auto;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    margin: 5vh auto;
+    line-height: 30px;
 }
