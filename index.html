@@ -63,6 +63,14 @@
     <div class="sectionWrapper" id="skills">
         <h1 class="sectionHeader">02. Skills</h1>
         <hr class="sectionHr"></hr>
+        <p class="sectionText" id="skillsText">
+            <br>
+            <b>Python:</b> 5<br>
+            <b>Web Development:</b> 4<br>
+            <b>Music Creation:</b> 4<br>
+            <b>C/C#:</b> 3<br>
+            <b>Graphic Design:</b> 3<br>
+        </p>
     </div>
     <div class="sectionWrapper" id="projects">
         <h1 class="sectionHeader">03. Projects</h1>
@@ -71,6 +79,16 @@
     <div class="sectionWrapper" id="contact">
         <h1 class="sectionHeader">04. Contact</h1>
         <hr class="sectionHr"></hr>
+        <div id="contactWrapper">
+            <form id="contactForm">
+                <input type="text" id="firstname" placeholder="First Name" required oninvalid="this.setCustomValidity('Please enter your name')"> <br>
+                <input type="text" id="lastname" placeholder="Last Name" required><br>
+                <input type="email" id="email" placeholder="Email Address" required><br>
+                <textarea rows="5" cols="60" id="message" placeholder="Message"></textarea> <br>
+                <input type="submit" id="submit" value="Contact Me">
+
+            </form>
+        </div>
     </div>
     <!-- SCRIPTS -->
     <script src="js/index.js" async defer></script>
