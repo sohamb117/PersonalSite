@@ -346,7 +346,7 @@ nav {
 
 input,
 textarea {
-    background-color: var(--nearblack);
+    background-color: var(--offblack);
     color: var(--offwhite);
     font-family: 'Dosis';
     letter-spacing: 1px;
@@ -356,6 +356,14 @@ textarea {
     padding: 6px;
     font-size: 14px;
     font-weight: normal;
+    transition: ease 0.25s;
+}
+
+input:focus,
+textarea:focus {
+    color: var(--offblack);
+    background-color: var(--white);
+    transform: scale(1.005);
 }
 
 #firstname {
@@ -378,4 +386,57 @@ textarea {
 
 #submit {
     width: 20vw;
+}
+
+.project {
+    width: 60vw;
+    height: 10vh;
+    margin: 2vh auto;
+    display: flex;
+    background-color: var(--nearblack);
+    vertical-align: middle;
+    transition: ease 0.25s;
+}
+
+.projectName {
+    font-family: 'exanregular';
+    line-height: 10vh;
+    font-size: 2.58vh;
+    margin: 0 2vw;
+    text-decoration: none;
+    color: var(--offwhite);
+    transition: ease 0.25s;
+}
+
+.projectInfo {
+    font-family: 'Dosis';
+    line-height: 10vh;
+    margin: 0 1vw;
+    font-size: 1.78vh;
+    color: var(--offwhite);
+    transition: ease 0.25s;
+}
+
+#intext {
+    color: var(--offwhite);
+}
+
+.project:hover {
+    transform: scale(1.005);
+    background-color: var(--white);
+}
+
+.project:hover .projectInfo {
+    transform: scale(1.005);
+    color: var(--nearblack);
+}
+
+.project:hover .projectName {
+    transform: scale(1.005);
+    color: var(--nearblack);
+}
+
+.project:hover #intext {
+    transform: scale(1.005);
+    color: var(--nearblack);
 }
